@@ -54,7 +54,7 @@ public class CategoryService implements ICategoryService{
             return Optional.ofNullable(getCategoryById(id)).map(oldCategory->{
                 oldCategory.setName(category.name);
                 return categoryRespository.save(oldCategory);
-            }).orElseThrow(()-> new ResourceNotFoundException("category no found"));
+            }).orElseThrow(()->{ throw new ResourceNotFoundException("category no found");});
     }
 
     @Override
