@@ -20,6 +20,16 @@ public class Product {
     private Long id;
     private String name ;
     private BigDecimal price ;
+
+    public Product(String name, BigDecimal price, String description, int inventory, String brand, Category category) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.inventory = inventory;
+        this.brand = brand;
+        this.category = category;
+    }
+
     private String description;
     private  int inventory;
     private String brand ;
